@@ -14,6 +14,8 @@
 		847768081F87B93A00E140CC /* CardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768071F87B93A00E140CC /* CardsCollectionViewController.swift */; };
 		8477680A1F87B95000E140CC /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768091F87B95000E140CC /* PersonalInfoViewController.swift */; };
 		8477680C1F87C26300E140CC /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */; };
+		847768181F87DB2D00E140CC /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768171F87DB2D00E140CC /* Resources.swift */; };
+		8477681A1F87DB8400E140CC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768191F87DB8400E140CC /* Router.swift */; };
 		DDCAE51B38A1C958B2856719 /* Pods_AtlanTeamTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167CBDB0F86224B58D2DF625 /* Pods_AtlanTeamTestTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		847768071F87B93A00E140CC /* CardsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewController.swift; sourceTree = "<group>"; };
 		847768091F87B95000E140CC /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		847768171F87DB2D00E140CC /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		847768191F87DB8400E140CC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 			children = (
 				847767F31F87B6F800E140CC /* AppDelegate.swift */,
 				847767F91F87B6F800E140CC /* Main.storyboard */,
+				847768171F87DB2D00E140CC /* Resources.swift */,
+				847768191F87DB8400E140CC /* Router.swift */,
 				847768071F87B93A00E140CC /* CardsCollectionViewController.swift */,
 				8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */,
 				847768091F87B95000E140CC /* PersonalInfoViewController.swift */,
@@ -220,6 +226,8 @@
 				8477680C1F87C26300E140CC /* CardCollectionViewCell.swift in Sources */,
 				847768081F87B93A00E140CC /* CardsCollectionViewController.swift in Sources */,
 				8477680A1F87B95000E140CC /* PersonalInfoViewController.swift in Sources */,
+				847768181F87DB2D00E140CC /* Resources.swift in Sources */,
+				8477681A1F87DB8400E140CC /* Router.swift in Sources */,
 				847767F41F87B6F800E140CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +392,7 @@
 				847768061F87B6F800E140CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
