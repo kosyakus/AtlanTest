@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "Card"
 
 class CardsCollectionViewController: UICollectionViewController {
     
@@ -55,12 +55,12 @@ class CardsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        self.collectionView?.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView?.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
     
         cell.backgroundColor = UIColor.blue
         
-        //cell.image.image =  icon[indexPath.row]
+        cell.image.image =  icon[indexPath.row]
     
         return cell
     }
