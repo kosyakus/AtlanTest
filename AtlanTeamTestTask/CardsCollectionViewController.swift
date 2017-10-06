@@ -61,18 +61,17 @@ class CardsCollectionViewController: UICollectionViewController {
     
     
      // MARK: - Navigation
-     
+    /*
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      
         
         if segue.identifier == "toShow" {
             let navigationController = segue.destination as! UINavigationController
-            let controller = navigationController.destination as! PostsTableViewController
+            //let controller = navigationController.popViewController(animated: true) as!PostsTableViewController
             
             }
-    
-        
-    }
+     
+    }*/
     
     
 
@@ -90,9 +89,20 @@ class CardsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
+ */
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)//главный сториборд
+            let AllResultsTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "qw")//View в который нужен переход
+        
+        if indexPath.item == 0 {
+            print("You selected cell \(indexPath.item)!")
+            navigationController?.pushViewController(AllResultsTableViewController, animated: true)
+        }
+    }
 
-    /*
+  /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
         return false
@@ -103,9 +113,17 @@ class CardsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+        
+        //let indexPath = indexPath.row
+        if indexPath.row == 0 {
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)//главный сториборд
+            let AllResultsTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "PostsTableViewController")//View в который нужен переход
+            navigationController?.pushViewController(AllResultsTableViewController, animated: true)
+        }
     
-    }
-    */
+    }*/
+    
     
     fileprivate let itemsPerRow: CGFloat = 3
     fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
