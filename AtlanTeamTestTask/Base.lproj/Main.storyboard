@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cards list-->
+        <!--Cards Collection View Controller-->
         <scene sceneID="zdw-pd-JOe">
             <objects>
                 <collectionViewController id="uo1-Wd-rzy" customClass="CardsCollectionViewController" customModule="AtlanTeamTestTask" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="iUo-t2-DPd">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="iUo-t2-DPd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,7 +47,7 @@
                                 <size key="customSize" width="120" height="120"/>
                                 <connections>
                                     <outlet property="image" destination="pcZ-Gr-G4q" id="RGv-Xz-3IK"/>
-                                    <segue destination="8uc-y4-uxw" kind="show" id="gYf-Dx-sI3"/>
+                                    <segue destination="Hgo-5u-qmj" kind="show" id="gYf-Dx-sI3"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -56,7 +56,7 @@
                             <outlet property="delegate" destination="uo1-Wd-rzy" id="Ize-Wk-nX7"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Cards list" id="LfK-o2-ABN"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="LfK-o2-ABN"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yuo-Ny-4Xo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,10 +101,13 @@
                             <outlet property="delegate" destination="8uc-y4-uxw" id="2VK-Ge-b11"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="IYF-nw-DgU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6Yp-Bu-vzy"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsU-OR-VIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1673" y="-323"/>
+            <point key="canvasLocation" x="2612" y="-323.38830584707648"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -123,7 +126,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-346" y="7"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dNO-Qc-XyL">
@@ -161,7 +164,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sokolova.natawa@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij1-TA-62C">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sokolova.natawa@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij1-TA-62C">
                                 <rect key="frame" x="105" y="166" width="220" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -187,6 +190,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAU-qb-5sK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="384"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cBj-cH-c7Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hgo-5u-qmj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pnF-om-w2A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8uc-y4-uxw" kind="relationship" relationship="rootViewController" id="nlB-ER-lLq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJO-eO-HkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.8" y="-323.38830584707648"/>
         </scene>
     </scenes>
 </document>
