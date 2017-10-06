@@ -14,9 +14,13 @@
 		847768081F87B93A00E140CC /* CardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768071F87B93A00E140CC /* CardsCollectionViewController.swift */; };
 		8477680A1F87B95000E140CC /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768091F87B95000E140CC /* PersonalInfoViewController.swift */; };
 		8477680C1F87C26300E140CC /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */; };
+		DDCAE51B38A1C958B2856719 /* Pods_AtlanTeamTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167CBDB0F86224B58D2DF625 /* Pods_AtlanTeamTestTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		167CBDB0F86224B58D2DF625 /* Pods_AtlanTeamTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AtlanTeamTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F2E5A5BC21076F55CE88564 /* Pods-AtlanTeamTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlanTeamTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AtlanTeamTestTask/Pods-AtlanTeamTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		535E52E9CA235CF3A5101B77 /* Pods-AtlanTeamTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlanTeamTestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-AtlanTeamTestTask/Pods-AtlanTeamTestTask.release.xcconfig"; sourceTree = "<group>"; };
 		847767F01F87B6F800E140CC /* AtlanTeamTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtlanTeamTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847767F31F87B6F800E140CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847767FA1F87B6F800E140CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCAE51B38A1C958B2856719 /* Pods_AtlanTeamTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				847767F21F87B6F800E140CC /* AtlanTeamTestTask */,
 				847767F11F87B6F800E140CC /* Products */,
+				8F9732E5B348A8C6FF34AA40 /* Pods */,
+				BA28015B4F52788B7886FE35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,23 @@
 			path = AtlanTeamTestTask;
 			sourceTree = "<group>";
 		};
+		8F9732E5B348A8C6FF34AA40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F2E5A5BC21076F55CE88564 /* Pods-AtlanTeamTestTask.debug.xcconfig */,
+				535E52E9CA235CF3A5101B77 /* Pods-AtlanTeamTestTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA28015B4F52788B7886FE35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				167CBDB0F86224B58D2DF625 /* Pods_AtlanTeamTestTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 847768041F87B6F800E140CC /* Build configuration list for PBXNativeTarget "AtlanTeamTestTask" */;
 			buildPhases = (
+				743AFC7CCB1B55B4CE27264A /* [CP] Check Pods Manifest.lock */,
 				847767EC1F87B6F800E140CC /* Sources */,
 				847767ED1F87B6F800E140CC /* Frameworks */,
 				847767EE1F87B6F800E140CC /* Resources */,
+				55A35577B30A3C85CB58931F /* [CP] Embed Pods Frameworks */,
+				3266E0E684B5D9012CC87882 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3266E0E684B5D9012CC87882 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AtlanTeamTestTask/Pods-AtlanTeamTestTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55A35577B30A3C85CB58931F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AtlanTeamTestTask/Pods-AtlanTeamTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		743AFC7CCB1B55B4CE27264A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		847767EC1F87B6F800E140CC /* Sources */ = {
@@ -266,6 +341,7 @@
 		};
 		847768051F87B6F800E140CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F2E5A5BC21076F55CE88564 /* Pods-AtlanTeamTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AtlanTeamTestTask/Info.plist;
@@ -278,6 +354,7 @@
 		};
 		847768061F87B6F800E140CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 535E52E9CA235CF3A5101B77 /* Pods-AtlanTeamTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AtlanTeamTestTask/Info.plist;
