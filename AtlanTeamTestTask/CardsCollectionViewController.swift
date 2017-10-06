@@ -58,7 +58,7 @@ class CardsCollectionViewController: UICollectionViewController {
         //self.collectionView?.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
     
-        cell.backgroundColor = UIColor.blue
+        cell.backgroundColor = UIColor.white
         
         cell.image.image =  icon[indexPath.row]
     
