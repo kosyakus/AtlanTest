@@ -62,16 +62,16 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-324.28785607196403"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Posts Table View Controller-->
         <scene sceneID="9M3-sJ-OQO">
             <objects>
-                <tableViewController id="8uc-y4-uxw" sceneMemberID="viewController">
+                <tableViewController id="8uc-y4-uxw" customClass="PostsTableViewController" customModule="AtlanTeamTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LtB-0t-yGh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" textLabel="0ld-Ut-b14" detailTextLabel="dzP-p0-UgV" style="IBUITableViewCellStyleValue1" id="chC-jb-L5x">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" textLabel="0ld-Ut-b14" detailTextLabel="dzP-p0-UgV" style="IBUITableViewCellStyleValue1" id="chC-jb-L5x">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="chC-jb-L5x" id="96d-fN-esa">
