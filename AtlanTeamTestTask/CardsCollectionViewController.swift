@@ -7,53 +7,12 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
 private let reuseIdentifier = "Card"
 
 class CardsCollectionViewController: UICollectionViewController {
     
-    let url = "https://jsonplaceholder.typicode.com/"
-    var resource = [Resources]()
     
-    
-    // functions for parsing json
-    typealias downloadNewsCompletion = () -> Void
-    
-    func downloadNews(category: String, completion: @escaping (_ success: Bool) -> Void) {
-
-        Alamofire.request("\(url)+\(category)").responseJSON { response in
-            
-            switch response.result {
-            case .success(let rawJson):
-                self.resource = self.parseNewsFromJson(rawJson: rawJson)
-                //print(self.resource)
-                
-                completion(true)
-                
-            case .failure(let error):
-                print(error)
-            }
-        }
-        
-    }
-    
-    private func parseNewsFromJson(rawJson: Any) -> [Resources] {
-        let json = JSON(rawJson)
-        print(json)
-        var newsArray = [Resources]()
-        for (_, subJson):(String, JSON) in json {
-            
-            if  let addNews = Resources(subJson) {
-                newsArray.append(addNews)
-                //print(newsArray)
-            }
-            
-        }
-        
-        return newsArray
-    }
     
     
     let icon = [UIImage(named: "post"), UIImage(named: "comment"), UIImage(named: "users"), UIImage(named: "photos"), UIImage(named: "todo")]
@@ -61,15 +20,7 @@ class CardsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        downloadNews(category: "posts") { (success) in
-                if success {
-                   print("success")
-                    print(self.resource)
-                }
-                
-            }
-    
+  
     }
 
     override func didReceiveMemoryWarning() {
@@ -116,7 +67,8 @@ class CardsCollectionViewController: UICollectionViewController {
             let controller = navigationController.topViewController as!PostsTableViewController
             
             let indexPath = collectionView?.indexPath(for: sender as! UICollectionViewCell)
-            controller.resources = self.resource
+            
+            controller.cardIndex = (indexPath?.row)!
             
             
             }

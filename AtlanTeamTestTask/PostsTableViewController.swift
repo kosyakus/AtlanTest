@@ -7,15 +7,103 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class PostsTableViewController: UITableViewController {
     
-    var resources = [Resources]()
+    let url = "https://jsonplaceholder.typicode.com/"
+    var resource = [Resources]()
+    
+    
+    // functions for parsing json
+    typealias downloadNewsCompletion = () -> Void
+    
+    func downloadNews(category: String, completion: @escaping (_ success: Bool) -> Void) {
+        
+        Alamofire.request("\(url + category)").responseJSON { [weak self] response in
+            
+            switch response.result {
+            case .success(let rawJson):
+                if let someRes = self?.parseNewsFromJson(rawJson: rawJson) {
+                    self?.resource = someRes
+                    //print(self?.resource)
+                }
+                completion(true)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+    }
+    
+    private func parseNewsFromJson(rawJson: Any) -> [Resources] {
+        let json = JSON(rawJson)
+        //print(json)
+        var newsArray = [Resources]()
+        for (_, subJson):(String, JSON) in json {
+            
+            if  let addNews = Resources(subJson) {
+                newsArray.append(addNews)
+                print(newsArray)
+            }
+            
+        }
+        
+        return newsArray
+    }
 
+    
+    var cardIndex = 0
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-               // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        switch cardIndex {
+        case 0:
+            downloadNews(category: "posts") { (success) in
+                if success {
+                    print("success")
+                    print(self.resource)
+                }
+            }
+        case 1:
+            downloadNews(category: "comments") { (success) in
+                if success {
+                    print("success")
+                    print(self.resource)
+                }
+            }
+        case 2:
+            downloadNews(category: "users") { (success) in
+                if success {
+                    print("success")
+                    print(self.resource)
+                }
+            }
+        case 3:
+            downloadNews(category: "photos") { (success) in
+                if success {
+                    print("success")
+                    print(self.resource)
+                }
+            }
+        case 4:
+            downloadNews(category: "todos") { (success) in
+                if success {
+                    print("success")
+                    print(self.resource)
+                }
+            }
+        default:
+            print("invalid card index")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +129,7 @@ class PostsTableViewController: UITableViewController {
         
         //let title = resources[indexPath.row]
 
-        cell.textLabel?.text = String(describing: resources[indexPath.row])
+        //cell.textLabel?.text = String(describing: resource[indexPath.row])
         //cell.detailTextLabel?.text = title.postTytle
 
         return cell

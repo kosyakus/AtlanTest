@@ -29,14 +29,14 @@ class Resources {
     convenience init?(_ json: JSON) {
         
         guard
-            let postID = json["id"].int,
-            let postTytle = json["title"].string,
-            let comment = json["body"].string,
-            let userName = json["name"].string,
-            let userCity = json["address"]["city"].string,
-            let userCompany = json["company"]["name"].string,
-            let photo = json["url"].string,
-            let taskResult = json["completed"].bool
+            let postID = json["id"].int ?? 0,
+            let postTytle = json["title"].string ?? "",
+            let comment = json["body"].string ?? "",
+            let userName = json["name"].string ?? "",
+            let userCity = json["address"]["city"].string ?? "",
+            let userCompany = json["company"]["name"].string ?? "",
+            let photo = json["url"].string ?? "",
+            let taskResult = json["completed"].bool ?? true
             
             else { return nil }
         
@@ -52,4 +52,5 @@ class Resources {
         
     }
     
+   
 }
