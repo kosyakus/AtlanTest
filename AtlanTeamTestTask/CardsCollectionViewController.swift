@@ -14,6 +14,7 @@ private let reuseIdentifier = "Card"
 
 class CardsCollectionViewController: UICollectionViewController {
     
+    let url = "https://jsonplaceholder.typicode.com/"
     var resource = [Resources]()
     
     
@@ -21,20 +22,15 @@ class CardsCollectionViewController: UICollectionViewController {
     typealias downloadNewsCompletion = () -> Void
     
     func downloadNews(category: String, completion: @escaping (_ success: Bool) -> Void) {
-        
-        
-        
-        Alamofire.request(Router.getResource(category: category)).responseJSON { response in
+
+        Alamofire.request("\(url)+\(category)").responseJSON { response in
             
             switch response.result {
             case .success(let rawJson):
                 self.resource = self.parseNewsFromJson(rawJson: rawJson)
-                //print(newsArray)
+                //print(self.resource)
                 
                 completion(true)
-                DispatchQueue.main.async() {
-                    self.collectionView?.reloadData()
-                }
                 
             case .failure(let error):
                 print(error)
@@ -45,13 +41,13 @@ class CardsCollectionViewController: UICollectionViewController {
     
     private func parseNewsFromJson(rawJson: Any) -> [Resources] {
         let json = JSON(rawJson)
-        //print(json)
+        print(json)
         var newsArray = [Resources]()
         for (_, subJson):(String, JSON) in json {
             
             if  let addNews = Resources(subJson) {
                 newsArray.append(addNews)
-                print(newsArray)
+                //print(newsArray)
             }
             
         }
@@ -66,8 +62,14 @@ class CardsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
+        downloadNews(category: "posts") { (success) in
+                if success {
+                   print("success")
+                    print(self.resource)
+                }
+                
+            }
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,16 +116,8 @@ class CardsCollectionViewController: UICollectionViewController {
             let controller = navigationController.topViewController as!PostsTableViewController
             
             let indexPath = collectionView?.indexPath(for: sender as! UICollectionViewCell)
+            controller.resources = self.resource
             
-            if indexPath?.item == 0 {
-                downloadNews(category: "posts") { (success) in
-                        if success {
-                            print("success")
-                        }
-                        
-                    }
-                
-            }
             
             }
      

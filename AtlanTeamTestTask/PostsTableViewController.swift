@@ -39,10 +39,10 @@ class PostsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
         
-       /* let title = resource[indexPath.row]
+        //let title = resources[indexPath.row]
 
-        cell.textLabel?.text = String(title.postID)
-        cell.detailTextLabel?.text = title.postTytle */
+        cell.textLabel?.text = String(describing: resources[indexPath.row])
+        //cell.detailTextLabel?.text = title.postTytle
 
         return cell
     }
