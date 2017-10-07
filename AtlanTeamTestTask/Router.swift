@@ -11,11 +11,16 @@ import Alamofire
 
 enum Router: URLRequestConvertible {
     
-    private var besePath: String {
-        return "https://jsonplaceholder.typicode.com/"
-    }
+    
     
     case getResource(category: String)
+    
+    private var besePath: String {
+        switch self {
+        case let .getResource(category):
+        return "https://jsonplaceholder.typicode.com/"+"\(category)"
+        }
+    }
     
     private var method: HTTPMethod {
         switch self {
@@ -24,18 +29,12 @@ enum Router: URLRequestConvertible {
         }
     }
     
-    private var parameters: Parameters {
-        switch self {
-        case let .getResource(category):
-            return ["category": category]
-        }
-    }
     
     func asURLRequest() throws -> URLRequest {
         let url = try besePath.asURL()
         let urlRequest = URLRequest(url: url)
         
-        return try URLEncoding.default.encode(urlRequest, with: parameters)
+        return try URLEncoding.default.encode(urlRequest, with: nil)
         
     }
 }

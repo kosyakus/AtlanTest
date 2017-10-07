@@ -10,7 +10,7 @@ import UIKit
 
 class PostsTableViewController: UITableViewController {
     
-    var resource = [Resources]()
+    var resources = [Resources]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class PostsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return 1
     }
 

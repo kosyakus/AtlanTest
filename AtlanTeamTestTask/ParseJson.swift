@@ -10,30 +10,32 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
+var resource = [Resources]()
 
 
 // functions for parsing json
 typealias downloadNewsCompletion = () -> Void
 
-func downloadNews(category: String, completion: @escaping (_ success: Bool) -> Void) {
+func downloadNews(category: String, completion: @escaping (_ success: Bool) -> Void) -> [Resources] {
     
-    var resource = [Resources]()
+    
     
     Alamofire.request(Router.getResource(category: category)).responseJSON { response in
         
         switch response.result {
         case .success(let rawJson):
-            resource = parseNewsFromJson(rawJson: rawJson) //{
+            return resource = parseNewsFromJson(rawJson: rawJson) //{
                 //resource = newsArrayFromJson
                 //print(newsArray)
            // }
-            completion(true)
+            //completion(true)
             
         case .failure(let error):
             print(error)
         }
     }
+    
+    return resource
 }
 
 private func parseNewsFromJson(rawJson: Any) -> [Resources] {
@@ -44,10 +46,12 @@ private func parseNewsFromJson(rawJson: Any) -> [Resources] {
         
         if  let addNews = Resources(subJson) {
             newsArray.append(addNews)
-            //print(newsArray)
+            print(newsArray)
         }
         
     }
     
     return newsArray
 }
+
+

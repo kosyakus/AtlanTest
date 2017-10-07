@@ -18,10 +18,6 @@
 		8477681A1F87DB8400E140CC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768191F87DB8400E140CC /* Router.swift */; };
 		8477681C1F87E7B500E140CC /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477681B1F87E7B500E140CC /* ParseJson.swift */; };
 		8477681E1F87F09200E140CC /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477681D1F87F09200E140CC /* PostsTableViewController.swift */; };
-		847768201F87F0B600E140CC /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477681F1F87F0B600E140CC /* CommentsTableViewController.swift */; };
-		847768221F87F47F00E140CC /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768211F87F47F00E140CC /* UsersTableViewController.swift */; };
-		847768241F87F47F00E140CC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768231F87F47F00E140CC /* PhotoViewController.swift */; };
-		847768261F87F5B800E140CC /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768251F87F5B800E140CC /* ToDoViewController.swift */; };
 		DDCAE51B38A1C958B2856719 /* Pods_AtlanTeamTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167CBDB0F86224B58D2DF625 /* Pods_AtlanTeamTestTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,10 +38,6 @@
 		847768191F87DB8400E140CC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8477681B1F87E7B500E140CC /* ParseJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
 		8477681D1F87F09200E140CC /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
-		8477681F1F87F0B600E140CC /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
-		847768211F87F47F00E140CC /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
-		847768231F87F47F00E140CC /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		847768251F87F5B800E140CC /* ToDoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +81,6 @@
 				847768071F87B93A00E140CC /* CardsCollectionViewController.swift */,
 				8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */,
 				8477681D1F87F09200E140CC /* PostsTableViewController.swift */,
-				8477681F1F87F0B600E140CC /* CommentsTableViewController.swift */,
-				847768211F87F47F00E140CC /* UsersTableViewController.swift */,
-				847768231F87F47F00E140CC /* PhotoViewController.swift */,
-				847768251F87F5B800E140CC /* ToDoViewController.swift */,
 				847768091F87B95000E140CC /* PersonalInfoViewController.swift */,
 				847767FC1F87B6F800E140CC /* Assets.xcassets */,
 				847767FE1F87B6F800E140CC /* LaunchScreen.storyboard */,
@@ -245,14 +233,10 @@
 				8477681E1F87F09200E140CC /* PostsTableViewController.swift in Sources */,
 				847768081F87B93A00E140CC /* CardsCollectionViewController.swift in Sources */,
 				8477680A1F87B95000E140CC /* PersonalInfoViewController.swift in Sources */,
-				847768261F87F5B800E140CC /* ToDoViewController.swift in Sources */,
 				8477681C1F87E7B500E140CC /* ParseJson.swift in Sources */,
 				847768181F87DB2D00E140CC /* Resources.swift in Sources */,
 				8477681A1F87DB8400E140CC /* Router.swift in Sources */,
 				847767F41F87B6F800E140CC /* AppDelegate.swift in Sources */,
-				847768221F87F47F00E140CC /* UsersTableViewController.swift in Sources */,
-				847768201F87F0B600E140CC /* CommentsTableViewController.swift in Sources */,
-				847768241F87F47F00E140CC /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

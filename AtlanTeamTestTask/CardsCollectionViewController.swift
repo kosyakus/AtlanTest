@@ -12,18 +12,23 @@ private let reuseIdentifier = "Card"
 
 class CardsCollectionViewController: UICollectionViewController {
     
+    //var resources = [Resources]()
+    
     let icon = [UIImage(named: "post"), UIImage(named: "comment"), UIImage(named: "users"), UIImage(named: "photos"), UIImage(named: "todo")]
+    let array = ["posts", "comments", "users", "photos", "todos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        for i in array {
+        resource = downloadNews(category: i) { (success) in
+            if success {
+                print("success")
+            }
+            
+        }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,17 +66,23 @@ class CardsCollectionViewController: UICollectionViewController {
     
     
      // MARK: - Navigation
-    /*
+    
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      
         
         if segue.identifier == "toShow" {
             let navigationController = segue.destination as! UINavigationController
-            //let controller = navigationController.popViewController(animated: true) as!PostsTableViewController
+            let controller = navigationController.topViewController as!PostsTableViewController
+            
+            let indexPath = collectionView?.indexPath(for: sender as! UICollectionViewCell)
+            
+            if indexPath?.item == 0 {
+                controller.resources = resource
+            }
             
             }
      
-    }*/
+    }
     
     
 
