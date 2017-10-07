@@ -12,11 +12,9 @@
 		847767FD1F87B6F800E140CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847767FC1F87B6F800E140CC /* Assets.xcassets */; };
 		847768001F87B6F800E140CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847767FE1F87B6F800E140CC /* LaunchScreen.storyboard */; };
 		847768081F87B93A00E140CC /* CardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768071F87B93A00E140CC /* CardsCollectionViewController.swift */; };
-		8477680A1F87B95000E140CC /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768091F87B95000E140CC /* PersonalInfoViewController.swift */; };
 		8477680C1F87C26300E140CC /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */; };
 		847768181F87DB2D00E140CC /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768171F87DB2D00E140CC /* Resources.swift */; };
 		8477681A1F87DB8400E140CC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768191F87DB8400E140CC /* Router.swift */; };
-		8477681C1F87E7B500E140CC /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477681B1F87E7B500E140CC /* ParseJson.swift */; };
 		8477681E1F87F09200E140CC /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477681D1F87F09200E140CC /* PostsTableViewController.swift */; };
 		DDCAE51B38A1C958B2856719 /* Pods_AtlanTeamTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167CBDB0F86224B58D2DF625 /* Pods_AtlanTeamTestTask.framework */; };
 /* End PBXBuildFile section */
@@ -32,11 +30,9 @@
 		847767FF1F87B6F800E140CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847768011F87B6F800E140CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847768071F87B93A00E140CC /* CardsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewController.swift; sourceTree = "<group>"; };
-		847768091F87B95000E140CC /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		847768171F87DB2D00E140CC /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		847768191F87DB8400E140CC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		8477681B1F87E7B500E140CC /* ParseJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
 		8477681D1F87F09200E140CC /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,11 +73,9 @@
 				847767F91F87B6F800E140CC /* Main.storyboard */,
 				847768171F87DB2D00E140CC /* Resources.swift */,
 				847768191F87DB8400E140CC /* Router.swift */,
-				8477681B1F87E7B500E140CC /* ParseJson.swift */,
 				847768071F87B93A00E140CC /* CardsCollectionViewController.swift */,
 				8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */,
 				8477681D1F87F09200E140CC /* PostsTableViewController.swift */,
-				847768091F87B95000E140CC /* PersonalInfoViewController.swift */,
 				847767FC1F87B6F800E140CC /* Assets.xcassets */,
 				847767FE1F87B6F800E140CC /* LaunchScreen.storyboard */,
 				847768011F87B6F800E140CC /* Info.plist */,
@@ -232,8 +226,6 @@
 				8477680C1F87C26300E140CC /* CardCollectionViewCell.swift in Sources */,
 				8477681E1F87F09200E140CC /* PostsTableViewController.swift in Sources */,
 				847768081F87B93A00E140CC /* CardsCollectionViewController.swift in Sources */,
-				8477680A1F87B95000E140CC /* PersonalInfoViewController.swift in Sources */,
-				8477681C1F87E7B500E140CC /* ParseJson.swift in Sources */,
 				847768181F87DB2D00E140CC /* Resources.swift in Sources */,
 				8477681A1F87DB8400E140CC /* Router.swift in Sources */,
 				847767F41F87B6F800E140CC /* AppDelegate.swift in Sources */,

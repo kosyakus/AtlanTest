@@ -107,24 +107,6 @@
             </objects>
             <point key="canvasLocation" x="1454" y="-324"/>
         </scene>
-        <!--Photo View Controller-->
-        <scene sceneID="mWV-YE-whV">
-            <objects>
-                <viewController id="Om9-ao-JCa" customClass="PhotoViewController" customModule="AtlanTeamTestTask" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="M4E-cE-3mu"/>
-                        <viewControllerLayoutGuide type="bottom" id="ng5-qZ-rU8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WBz-WK-UM7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="giS-2b-o9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3076" y="-324"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>

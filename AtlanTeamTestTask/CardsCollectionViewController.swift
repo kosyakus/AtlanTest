@@ -7,27 +7,66 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 private let reuseIdentifier = "Card"
 
 class CardsCollectionViewController: UICollectionViewController {
     
-    //var resources = [Resources]()
+    var resource = [Resources]()
+    
+    
+    // functions for parsing json
+    typealias downloadNewsCompletion = () -> Void
+    
+    func downloadNews(category: String, completion: @escaping (_ success: Bool) -> Void) {
+        
+        
+        
+        Alamofire.request(Router.getResource(category: category)).responseJSON { response in
+            
+            switch response.result {
+            case .success(let rawJson):
+                self.resource = self.parseNewsFromJson(rawJson: rawJson)
+                //print(newsArray)
+                
+                completion(true)
+                DispatchQueue.main.async() {
+                    self.collectionView?.reloadData()
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+    }
+    
+    private func parseNewsFromJson(rawJson: Any) -> [Resources] {
+        let json = JSON(rawJson)
+        //print(json)
+        var newsArray = [Resources]()
+        for (_, subJson):(String, JSON) in json {
+            
+            if  let addNews = Resources(subJson) {
+                newsArray.append(addNews)
+                print(newsArray)
+            }
+            
+        }
+        
+        return newsArray
+    }
+    
     
     let icon = [UIImage(named: "post"), UIImage(named: "comment"), UIImage(named: "users"), UIImage(named: "photos"), UIImage(named: "todo")]
-    let array = ["posts", "comments", "users", "photos", "todos"]
+    //let array = ["posts", "comments", "users", "photos", "todos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        for i in array {
-        resource = downloadNews(category: i) { (success) in
-            if success {
-                print("success")
-            }
-            
-        }
-        }
+        
         
     }
 
@@ -77,7 +116,13 @@ class CardsCollectionViewController: UICollectionViewController {
             let indexPath = collectionView?.indexPath(for: sender as! UICollectionViewCell)
             
             if indexPath?.item == 0 {
-                controller.resources = resource
+                downloadNews(category: "posts") { (success) in
+                        if success {
+                            print("success")
+                        }
+                        
+                    }
+                
             }
             
             }
@@ -101,7 +146,7 @@ class CardsCollectionViewController: UICollectionViewController {
         return true
     }
  */
-    
+    /*
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)//главный сториборд
@@ -111,7 +156,7 @@ class CardsCollectionViewController: UICollectionViewController {
             print("You selected cell \(indexPath.item)!")
             navigationController?.pushViewController(AllResultsTableViewController, animated: true)
         }
-    }
+    }*/
 
   /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
