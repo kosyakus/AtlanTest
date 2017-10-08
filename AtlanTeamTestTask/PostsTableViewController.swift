@@ -269,5 +269,9 @@ class PostsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func cancel() {
+        dismiss(animated: true, completion: nil)
+    }
 
 }
