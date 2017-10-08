@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841AB5FA1F8A2216007A768D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AB5F91F8A2216007A768D /* Posts.swift */; };
+		8459A26D1F8AD8C700BAE8E7 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A26C1F8AD8C700BAE8E7 /* Comments.swift */; };
+		8459A26F1F8AD8CA00BAE8E7 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A26E1F8AD8CA00BAE8E7 /* Photos.swift */; };
+		8459A2711F8AD8CC00BAE8E7 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A2701F8AD8CC00BAE8E7 /* Todos.swift */; };
+		8459A2731F8AD8D100BAE8E7 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A2721F8AD8D100BAE8E7 /* Users.swift */; };
 		847767F41F87B6F800E140CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847767F31F87B6F800E140CC /* AppDelegate.swift */; };
 		847767FB1F87B6F800E140CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847767F91F87B6F800E140CC /* Main.storyboard */; };
 		847767FD1F87B6F800E140CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847767FC1F87B6F800E140CC /* Assets.xcassets */; };
@@ -23,6 +28,11 @@
 		167CBDB0F86224B58D2DF625 /* Pods_AtlanTeamTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AtlanTeamTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2E5A5BC21076F55CE88564 /* Pods-AtlanTeamTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlanTeamTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AtlanTeamTestTask/Pods-AtlanTeamTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		535E52E9CA235CF3A5101B77 /* Pods-AtlanTeamTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtlanTeamTestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-AtlanTeamTestTask/Pods-AtlanTeamTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		841AB5F91F8A2216007A768D /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		8459A26C1F8AD8C700BAE8E7 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		8459A26E1F8AD8CA00BAE8E7 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		8459A2701F8AD8CC00BAE8E7 /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
+		8459A2721F8AD8D100BAE8E7 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		847767F01F87B6F800E140CC /* AtlanTeamTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtlanTeamTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847767F31F87B6F800E140CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847767FA1F87B6F800E140CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +86,11 @@
 				847768071F87B93A00E140CC /* CardsCollectionViewController.swift */,
 				8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */,
 				8477681D1F87F09200E140CC /* PostsTableViewController.swift */,
+				841AB5F91F8A2216007A768D /* Posts.swift */,
+				8459A26C1F8AD8C700BAE8E7 /* Comments.swift */,
+				8459A26E1F8AD8CA00BAE8E7 /* Photos.swift */,
+				8459A2701F8AD8CC00BAE8E7 /* Todos.swift */,
+				8459A2721F8AD8D100BAE8E7 /* Users.swift */,
 				847767FC1F87B6F800E140CC /* Assets.xcassets */,
 				847767FE1F87B6F800E140CC /* LaunchScreen.storyboard */,
 				847768011F87B6F800E140CC /* Info.plist */,
@@ -223,12 +238,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8459A26F1F8AD8CA00BAE8E7 /* Photos.swift in Sources */,
 				8477680C1F87C26300E140CC /* CardCollectionViewCell.swift in Sources */,
+				841AB5FA1F8A2216007A768D /* Posts.swift in Sources */,
+				8459A2711F8AD8CC00BAE8E7 /* Todos.swift in Sources */,
 				8477681E1F87F09200E140CC /* PostsTableViewController.swift in Sources */,
 				847768081F87B93A00E140CC /* CardsCollectionViewController.swift in Sources */,
 				847768181F87DB2D00E140CC /* Resources.swift in Sources */,
 				8477681A1F87DB8400E140CC /* Router.swift in Sources */,
 				847767F41F87B6F800E140CC /* AppDelegate.swift in Sources */,
+				8459A26D1F8AD8C700BAE8E7 /* Comments.swift in Sources */,
+				8459A2731F8AD8D100BAE8E7 /* Users.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,12 @@ import SwiftyJSON
 class PostsTableViewController: UITableViewController {
     
     let url = "https://jsonplaceholder.typicode.com/"
-    var resource = [Resources]()
+    //var resource = [Resources]()
+    var posts = [Posts]()
+    var comments = [Comments]()
+    var users = [Users]()
+    var photos = [Photos]()
+    var todos = [Todos]()
     
     
     // functions for parsing json
@@ -25,12 +30,55 @@ class PostsTableViewController: UITableViewController {
             
             switch response.result {
             case .success(let rawJson):
-                if let someRes = self?.parseNewsFromJson(rawJson: rawJson) {
-                    self?.resource = someRes
-                    //print(self?.resource)
+                let json = JSON(rawJson)
+                for subJson in json[].arrayValue {
+                    switch category {
+                    case "posts":
+                        if  let addNews = Posts(subJson) {
+                            self?.posts.append(addNews)
+                            print(self?.posts as Any)
+                        }
+                    case "comments":
+                        if  let addNews = Comments(subJson) {
+                            self?.comments.append(addNews)
+                            print(self?.comments as Any)
+                        }
+                    case "users":
+                        if  let addNews = Users(subJson) {
+                            self?.users.append(addNews)
+                            print(self?.users as Any)
+                        }
+                    case "photos":
+                        if  let addNews = Photos(subJson) {
+                            self?.photos.append(addNews)
+                            print(self?.photos as Any)
+                        }
+                    case "todos":
+                        if  let addNews = Todos(subJson) {
+                            self?.todos.append(addNews)
+                            print(self?.todos as Any)
+                        }
+                    default: break
+                    }
+                    
+                    
                 }
-                completion(true)
                 
+                //self?.posts = (self?.parseNewsFromJson(rawJson: rawJson))!
+                /*if let someRes = self?.parseNewsFromJson(rawJson: rawJson) {
+                    switch category {
+                    case "posts":
+                        self?.posts = someRes
+                    case "comments":
+                        self?.comments = someRes
+                    default: break
+                    }
+                   
+                }*/
+                completion(true)
+                DispatchQueue.main.async() {
+                    self?.tableView.reloadData()
+                }
             case .failure(let error):
                 print(error)
             }
@@ -38,21 +86,26 @@ class PostsTableViewController: UITableViewController {
         
     }
     
-    private func parseNewsFromJson(rawJson: Any) -> [Resources] {
+    /*
+    private func parseNewsFromJson(rawJson: Any) -> [Posts] {
         let json = JSON(rawJson)
         //print(json)
-        var newsArray = [Resources]()
-        for (_, subJson):(String, JSON) in json {
+        /*var postsArray = [Posts]()
+        var commArray = [Comments]()
+        var usersArray = [Users]()
+        var photosArray = [Photos]()
+        var todosArray = [Todos]()*/
+        for subJson in json[].arrayValue {
             
-            if  let addNews = Resources(subJson) {
-                newsArray.append(addNews)
-                print(newsArray)
+            if  let addNews = Posts(subJson) {
+                posts.append(addNews)
+                print(posts)
             }
             
         }
         
-        return newsArray
-    }
+        return posts
+    }*/
 
     
     var cardIndex = 0
@@ -62,50 +115,49 @@ class PostsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         switch cardIndex {
         case 0:
             downloadNews(category: "posts") { (success) in
                 if success {
                     print("success")
-                    print(self.resource)
+                    print(self.posts)
                 }
             }
         case 1:
             downloadNews(category: "comments") { (success) in
                 if success {
                     print("success")
-                    print(self.resource)
+                    //print(self.resource)
                 }
             }
         case 2:
             downloadNews(category: "users") { (success) in
                 if success {
                     print("success")
-                    print(self.resource)
+                    //print(self.resource)
                 }
             }
         case 3:
             downloadNews(category: "photos") { (success) in
                 if success {
                     print("success")
-                    print(self.resource)
+                    //print(self.resource)
                 }
             }
         case 4:
             downloadNews(category: "todos") { (success) in
                 if success {
                     print("success")
-                    print(self.resource)
+                    //print(self.resource)
                 }
             }
         default:
             print("invalid card index")
         }
+        
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -119,18 +171,55 @@ class PostsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch cardIndex {
+        case 0:
+            return posts.count
+        case 1:
+            return comments.count
+        case 2:
+            return users.count
+        case 3:
+            return photos.count
+        case 4:
+            return todos.count
+        default:
+            return 1
+        }
         
-        return 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
         
-        //let title = resources[indexPath.row]
+        switch cardIndex {
+        case 0:
+            let title = posts[indexPath.row]
+            cell.textLabel?.text = title.postTytle
+            cell.detailTextLabel?.text = String(describing: title.postID)
+        case 1:
+            let title = comments[indexPath.row]
+            cell.textLabel?.text = title.comment
+        case 2:
+            let title = users[indexPath.row]
+            cell.textLabel?.text = title.userName
+            cell.detailTextLabel?.text = title.userCompany
+        case 3:
+            let title = photos[indexPath.row]
+            let imgURL:URL = URL(string: title.photo)!
+            let imgData = try! Data(contentsOf: imgURL)
+            cell.imageView?.image = UIImage(data: imgData)
+        case 4:
+            let title = todos[indexPath.row]
+            cell.textLabel?.text = title.taskResult
+        default:
+            break
+        }
+        
+        //let title = posts[indexPath.row]
 
-        //cell.textLabel?.text = String(describing: resource[indexPath.row])
-        //cell.detailTextLabel?.text = title.postTytle
+        /*cell.textLabel?.text = title.postTytle
+        cell.detailTextLabel?.text = String(describing: title.postID)*/
 
         return cell
     }
