@@ -32,4 +32,8 @@ class TodoViewController: UIViewController {
     }
     */
 
+    @IBAction func cancel() {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

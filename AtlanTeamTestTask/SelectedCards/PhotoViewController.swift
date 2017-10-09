@@ -10,10 +10,17 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = photos[5].photo
 
-        // Do any additional setup after loading the view.
+        let imgURL:URL = URL(string: url)!
+        let imgData = try! Data(contentsOf: imgURL)
+        imageView?.image = UIImage(data: imgData)
+        
     }
 
     override func didReceiveMemoryWarning() {

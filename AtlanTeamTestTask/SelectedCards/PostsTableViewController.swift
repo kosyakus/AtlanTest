@@ -15,15 +15,8 @@ class PostsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       //title = "\(String(describing: cardIndex))"
-    
+      
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.tableView.reloadData()
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,13 +26,11 @@ class PostsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return posts.count
+        return 100
     }
 
     
@@ -47,11 +38,9 @@ class PostsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
         
         let title = posts[indexPath.row]
-            cell.textLabel?.text = title.postTytle
-            cell.detailTextLabel?.text = String(describing: title.postID)
-        /*case 1:
-            let title = comments[indexPath.row]
-            cell.textLabel?.text = title.comment
+            cell.detailTextLabel?.text = title.postTytle
+            cell.textLabel?.text = "Post ID \(title.postID)"
+        /*
         case 2:
             let title = users[indexPath.row]
             cell.textLabel?.text = title.userName

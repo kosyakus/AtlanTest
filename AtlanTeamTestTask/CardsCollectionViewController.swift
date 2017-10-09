@@ -112,13 +112,28 @@ class CardsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)//главный сториборд
-            let AllResultsTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "PostsTableViewController")//View в который нужен переход
+        var identifier = ""
         
         if indexPath.item == 0 {
-            print("You selected cell \(indexPath.item)!")
-            self.present(AllResultsTableViewController, animated: true, completion: nil)
+            identifier = "PostsTableViewController"
             //navigationController?.pushViewController(AllResultsTableViewController, animated: true)
         }
+        if indexPath.item == 1 {
+            identifier = "CommentsTableViewController"
+        }
+        if indexPath.item == 2 {
+            identifier = "UserTableViewController"
+        }
+        if indexPath.item == 3 {
+            identifier = "PhotoViewController"
+        }
+        if indexPath.item == 4 {
+            identifier = "TodoViewController"
+        }
+        let AllResultsTableViewController = mainStoryboard.instantiateViewController(withIdentifier: identifier)
+        self.present(AllResultsTableViewController, animated: true, completion: nil)
+        print("You selected cell \(indexPath.item)!")
+        
     }
 
   /*

@@ -12,29 +12,21 @@ class CommentsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return comments.count
     }
 
     
@@ -42,7 +34,8 @@ class CommentsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentsCell", for: indexPath)
 
         let title = comments[indexPath.row]
-        cell.textLabel?.text = title.comment
+        cell.textLabel?.text = "Comment #\(indexPath.row+1)"
+        cell.detailTextLabel?.text = title.comment
 
         return cell
     }
