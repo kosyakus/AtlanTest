@@ -10,10 +10,20 @@ import UIKit
 
 class TodoViewController: UIViewController {
 
+    @IBOutlet weak var labelTexto: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let randomTask = Int(arc4random_uniform(UInt32(todos.count)))
+        print("There are \(todos.count) tasks, Selected task is \(randomTask)")
 
-        // Do any additional setup after loading the view.
+        if todos[randomTask].taskResult == true {
+            labelTexto.text = "Completed"
+        } else {
+            labelTexto.text = "In progress"
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

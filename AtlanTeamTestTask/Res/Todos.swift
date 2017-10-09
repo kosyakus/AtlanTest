@@ -10,12 +10,12 @@ import SwiftyJSON
 
 class Todos {
    
-    dynamic var taskResult: String = ""
+    dynamic var taskResult: Bool = true
     
     convenience init?(_ json: JSON) {
         
         guard
-            let taskResult = json["completed"].string
+            let taskResult = json["completed"].bool
             
             else { return nil }
         

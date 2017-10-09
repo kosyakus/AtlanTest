@@ -260,6 +260,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="labelTexto" destination="0Xw-Ul-0Fo" id="u0D-n7-flR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9RB-TS-TRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
