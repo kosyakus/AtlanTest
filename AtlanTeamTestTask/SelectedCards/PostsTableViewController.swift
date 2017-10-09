@@ -1,51 +1,75 @@
 //
-//  CommentsTableViewController.swift
+//  PostsTableViewController.swift
 //  AtlanTeamTestTask
 //
-//  Created by Admin on 09.10.17.
+//  Created by Admin on 06.10.17.
 //  Copyright © 2017 NS. All rights reserved.
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class CommentsTableViewController: UITableViewController {
+class PostsTableViewController: UITableViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+       //title = "\(String(describing: cardIndex))"
+    
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return posts.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
+        
+        let title = posts[indexPath.row]
+            cell.textLabel?.text = title.postTytle
+            cell.detailTextLabel?.text = String(describing: title.postID)
+        /*case 1:
+            let title = comments[indexPath.row]
+            cell.textLabel?.text = title.comment
+        case 2:
+            let title = users[indexPath.row]
+            cell.textLabel?.text = title.userName
+            cell.detailTextLabel?.text = title.userCompany
+        case 3:
+            let title = photos[indexPath.row]
+            let imgURL:URL = URL(string: title.photo)!
+            let imgData = try! Data(contentsOf: imgURL)
+            cell.imageView?.image = UIImage(data: imgData)
+        case 4:
+            let title = todos[indexPath.row]
+            cell.textLabel?.text = title.taskResult
+        default:
+            break
+        }*/
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +115,9 @@ class CommentsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func cancel() {
+        dismiss(animated: true, completion: nil)
+    }
 
 }
