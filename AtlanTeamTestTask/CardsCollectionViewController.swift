@@ -66,7 +66,7 @@ class CardsCollectionViewController: UICollectionViewController {
     
     
      // MARK: - Navigation
-    
+    /*
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      
         
@@ -80,7 +80,7 @@ class CardsCollectionViewController: UICollectionViewController {
               
             }
      
-    }
+    } */
     
     
 
@@ -99,26 +99,27 @@ class CardsCollectionViewController: UICollectionViewController {
         return true
     }
  */
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let viewController: PostsTableViewController = UIStoryboard.instantiate(storyboardName: "PostsTableViewController")
-        //viewController.parametrs = parametrs
-        self.present(viewController, animated: true, completion: nil)
-        
-    }
-    
     /*
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let viewController = UIStoryboard.instantiate(storyboardName: "PostsTableViewController")
+        //viewController.parametrs = parametrs
+        //self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.show(viewController, sender: nil)
+    }*/
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)//главный сториборд
-            let AllResultsTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "qw")//View в который нужен переход
+            let AllResultsTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "PostsTableViewController")//View в который нужен переход
         
         if indexPath.item == 0 {
             print("You selected cell \(indexPath.item)!")
-            navigationController?.pushViewController(AllResultsTableViewController, animated: true)
+            self.present(AllResultsTableViewController, animated: true, completion: nil)
+            //navigationController?.pushViewController(AllResultsTableViewController, animated: true)
         }
-    }*/
+    }
 
   /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

@@ -13,6 +13,7 @@
 		8459A2711F8AD8CC00BAE8E7 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A2701F8AD8CC00BAE8E7 /* Todos.swift */; };
 		8459A2731F8AD8D100BAE8E7 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A2721F8AD8D100BAE8E7 /* Users.swift */; };
 		8459A2751F8B9AFE00BAE8E7 /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A2741F8B9AFE00BAE8E7 /* ParseJson.swift */; };
+		8459A2771F8BDC3700BAE8E7 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459A2761F8BDC3700BAE8E7 /* CommentsTableViewController.swift */; };
 		847767F41F87B6F800E140CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847767F31F87B6F800E140CC /* AppDelegate.swift */; };
 		847767FB1F87B6F800E140CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847767F91F87B6F800E140CC /* Main.storyboard */; };
 		847767FD1F87B6F800E140CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847767FC1F87B6F800E140CC /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		8459A2701F8AD8CC00BAE8E7 /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
 		8459A2721F8AD8D100BAE8E7 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		8459A2741F8B9AFE00BAE8E7 /* ParseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
+		8459A2761F8BDC3700BAE8E7 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
 		847767F01F87B6F800E140CC /* AtlanTeamTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtlanTeamTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847767F31F87B6F800E140CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847767FA1F87B6F800E140CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				8459A2741F8B9AFE00BAE8E7 /* ParseJson.swift */,
 				8477680B1F87C26300E140CC /* CardCollectionViewCell.swift */,
 				8477681D1F87F09200E140CC /* PostsTableViewController.swift */,
+				8459A2761F8BDC3700BAE8E7 /* CommentsTableViewController.swift */,
 				841AB5F91F8A2216007A768D /* Posts.swift */,
 				8459A26C1F8AD8C700BAE8E7 /* Comments.swift */,
 				8459A26E1F8AD8CA00BAE8E7 /* Photos.swift */,
@@ -243,6 +246,7 @@
 			files = (
 				8459A26F1F8AD8CA00BAE8E7 /* Photos.swift in Sources */,
 				8477680C1F87C26300E140CC /* CardCollectionViewCell.swift in Sources */,
+				8459A2771F8BDC3700BAE8E7 /* CommentsTableViewController.swift in Sources */,
 				841AB5FA1F8A2216007A768D /* Posts.swift in Sources */,
 				8459A2711F8AD8CC00BAE8E7 /* Todos.swift in Sources */,
 				8477681E1F87F09200E140CC /* PostsTableViewController.swift in Sources */,
