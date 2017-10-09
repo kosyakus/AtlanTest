@@ -277,7 +277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="100" id="3hR-wR-PSt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="100" id="3hR-wR-PSt" customClass="UserTableViewCell" customModule="AtlanTeamTestTask" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3hR-wR-PSt" id="FBe-xA-af0">
@@ -317,6 +317,11 @@
                                         <constraint firstItem="E3Y-e6-lEm" firstAttribute="centerX" secondItem="FBe-xA-af0" secondAttribute="centerX" id="qtr-oh-sUx"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="userCity" destination="8j9-ag-yyN" id="7Ua-Sh-FNt"/>
+                                    <outlet property="userCompany" destination="zyg-fG-JhF" id="vTT-zB-lyg"/>
+                                    <outlet property="userName" destination="lBX-Za-MR7" id="fyp-9B-Wc3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

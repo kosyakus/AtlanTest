@@ -26,6 +26,7 @@
 		847768181F87DB2D00E140CC /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768171F87DB2D00E140CC /* Resources.swift */; };
 		8477681A1F87DB8400E140CC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847768191F87DB8400E140CC /* Router.swift */; };
 		8477681E1F87F09200E140CC /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477681D1F87F09200E140CC /* PostsTableViewController.swift */; };
+		84BE94041F8C234F00F86AB1 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE94031F8C234F00F86AB1 /* UserTableViewCell.swift */; };
 		DDCAE51B38A1C958B2856719 /* Pods_AtlanTeamTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167CBDB0F86224B58D2DF625 /* Pods_AtlanTeamTestTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		847768171F87DB2D00E140CC /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		847768191F87DB8400E140CC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8477681D1F87F09200E140CC /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		84BE94031F8C234F00F86AB1 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				8459A27C1F8BDF2F00BAE8E7 /* UserTableViewController.swift */,
+				84BE94031F8C234F00F86AB1 /* UserTableViewCell.swift */,
 				8459A2801F8BE39300BAE8E7 /* TodoViewController.swift */,
 				8459A27E1F8BE2E700BAE8E7 /* PhotoViewController.swift */,
 				8459A2761F8BDC3700BAE8E7 /* CommentsTableViewController.swift */,
@@ -284,6 +287,7 @@
 				8459A26D1F8AD8C700BAE8E7 /* Comments.swift in Sources */,
 				8459A2731F8AD8D100BAE8E7 /* Users.swift in Sources */,
 				8459A2751F8B9AFE00BAE8E7 /* ParseJson.swift in Sources */,
+				84BE94041F8C234F00F86AB1 /* UserTableViewCell.swift in Sources */,
 				8459A27F1F8BE2E700BAE8E7 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

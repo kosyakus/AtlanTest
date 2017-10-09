@@ -29,9 +29,13 @@ class UserTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserTableViewCell
+        
+        let user = users[indexPath.row]
 
-        // Configure the cell...
+        cell.userName.text = "User name is \(user.userName)"
+        cell.userCompany.text = "User company is \(user.userCompany)"
+        cell.userCity.text = "User city is \(user.userCity)"
 
         return cell
     }
