@@ -16,10 +16,18 @@ class CardsCollectionViewController: UICollectionViewController {
     
     
     let icon = [UIImage(named: "post"), UIImage(named: "comment"), UIImage(named: "users"), UIImage(named: "photos"), UIImage(named: "todo")]
-    //let array = ["posts", "comments", "users", "photos", "todos"]
+    let array = ["posts", "comments", "users", "photos", "todos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in array {
+            downloadNews(category: i) { (success) in
+                if success {
+                    print("success")
+                }
+            }
+        }
   
     }
 
@@ -65,12 +73,11 @@ class CardsCollectionViewController: UICollectionViewController {
         if segue.identifier == "toShow" {
             let navigationController = segue.destination as! UINavigationController
             let controller = navigationController.topViewController as!PostsTableViewController
-            
+                        
             let indexPath = collectionView?.indexPath(for: sender as! UICollectionViewCell)
-            
             controller.cardIndex = (indexPath?.row)!
-            
-            
+            print(controller.cardIndex)
+              
             }
      
     }
@@ -92,6 +99,15 @@ class CardsCollectionViewController: UICollectionViewController {
         return true
     }
  */
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let viewController: PostsTableViewController = UIStoryboard.instantiate(storyboardName: "PostsTableViewController")
+        //viewController.parametrs = parametrs
+        self.present(viewController, animated: true, completion: nil)
+        
+    }
+    
     /*
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -160,5 +176,23 @@ extension CardsCollectionViewController : UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
+    }
+}
+
+
+extension UIViewController {
+    class var identifier: String {
+        return String(describing: self)
+    }
+}
+
+extension UIStoryboard {
+    class func instantiate<T: UIViewController>(storyboardName: String) -> T {
+        let identifier = String(describing: T.self)
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
+            fatalError()
+        }
+        return viewController
     }
 }

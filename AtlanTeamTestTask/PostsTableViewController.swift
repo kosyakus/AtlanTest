@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class PostsTableViewController: UITableViewController {
     
-    let url = "https://jsonplaceholder.typicode.com/"
+/*    let url = "https://jsonplaceholder.typicode.com/"
     //var resource = [Resources]()
     var posts = [Posts]()
     var comments = [Comments]()
@@ -84,7 +84,7 @@ class PostsTableViewController: UITableViewController {
             }
         }
         
-    }
+    } */
     
     /*
     private func parseNewsFromJson(rawJson: Any) -> [Posts] {
@@ -115,7 +115,10 @@ class PostsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch cardIndex {
+       title = "\(String(describing: cardIndex))"
+        
+        
+     /*   switch cardIndex {
         case 0:
             downloadNews(category: "posts") { (success) in
                 if success {
@@ -153,8 +156,12 @@ class PostsTableViewController: UITableViewController {
             }
         default:
             print("invalid card index")
-        }
+        }*/
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     
