@@ -14,8 +14,9 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Photo #3"
         
-        let url = photos[5].photo
+        let url = photos[2].photo
 
         let imgURL:URL = URL(string: url)!
         let imgData = try! Data(contentsOf: imgURL)

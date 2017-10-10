@@ -24,6 +24,7 @@ class TodoViewController: UIViewController {
             labelTexto.text = "In progress"
         }
         
+        title = "Task #\(randomTask)"
     }
 
     override func didReceiveMemoryWarning() {

@@ -11,6 +11,7 @@ class UserTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Users"
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,6 +12,8 @@ class CommentsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Comments"
     }
 
     override func didReceiveMemoryWarning() {

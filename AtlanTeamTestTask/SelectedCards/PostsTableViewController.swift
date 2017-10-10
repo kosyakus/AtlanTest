@@ -15,6 +15,8 @@ class PostsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Posts"
       
     }
     
@@ -40,22 +42,7 @@ class PostsTableViewController: UITableViewController {
         let title = posts[indexPath.row]
             cell.detailTextLabel?.text = title.postTytle
             cell.textLabel?.text = "Post ID \(title.postID)"
-        /*
-        case 2:
-            let title = users[indexPath.row]
-            cell.textLabel?.text = title.userName
-            cell.detailTextLabel?.text = title.userCompany
-        case 3:
-            let title = photos[indexPath.row]
-            let imgURL:URL = URL(string: title.photo)!
-            let imgData = try! Data(contentsOf: imgURL)
-            cell.imageView?.image = UIImage(data: imgData)
-        case 4:
-            let title = todos[indexPath.row]
-            cell.textLabel?.text = title.taskResult
-        default:
-            break
-        }*/
+        
         return cell
     }
     
